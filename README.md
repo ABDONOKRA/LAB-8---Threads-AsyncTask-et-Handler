@@ -1,5 +1,8 @@
 # LAB-8---Threads-AsyncTask-et-Handler
 
+  ## structure de projet   
+  
+<img width="736" height="353" alt="image" src="https://github.com/user-attachments/assets/06180c21-c1e8-420f-8a46-adcd4c2df928" />
 
 
 ## le code logique :  
@@ -134,4 +137,14 @@ public class MainActivity extends AppCompatActivity {
 <img width="454" height="941" alt="image" src="https://github.com/user-attachments/assets/87b7f651-a797-455c-8caa-0b052a3194f8" />
 
 
-<img width="454" height="941" alt="image" src="https://github.com/user-attachments/assets/41cea799-c2e0-4d0c-8695-760cc5720ee4" />
+<img width="454" height="941" alt="image" src="https://github.com/user-attachments/assets/41cea799-c2e0-4d0c-8695-760cc5720ee4" />  
+
+
+
+
+•
+Problème : Si on exécute Thread.sleep() directement dans onCreate, l'application se bloque et affiche une erreur "ANR".
+•
+Solution Thread : J'ai utilisé new Thread() pour le travail de fond, mais j'ai dû utiliser un Handler pour modifier l'UI, car seul le fil principal peut toucher aux vues.
+•
+Solution AsyncTask : C'est plus simple car Android gère automatiquement le passage entre le fond (doInBackground) et l'interface (onPostExecute).
