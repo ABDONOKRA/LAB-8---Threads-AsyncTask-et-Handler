@@ -142,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-•
-Problème : Si on exécute Thread.sleep() directement dans onCreate, l'application se bloque et affiche une erreur "ANR".
-•
-Solution Thread : J'ai utilisé new Thread() pour le travail de fond, mais j'ai dû utiliser un Handler pour modifier l'UI, car seul le fil principal peut toucher aux vues.
-•
-Solution AsyncTask : C'est plus simple car Android gère automatiquement le passage entre le fond (doInBackground) et l'interface (onPostExecute).
+• Problème : Si on exécute Thread.sleep() directement dans onCreate, l'application se bloque et affiche une erreur "ANR".  
+
+•Solution Thread : J'ai utilisé new Thread() pour le travail de fond, mais j'ai dû utiliser un Handler pour modifier l'UI, car seul le fil principal peut toucher aux vues.  
+
+•Solution AsyncTask : C'est plus simple car Android gère automatiquement le passage entre le fond (doInBackground) et l'interface (onPostExecute).  
+
